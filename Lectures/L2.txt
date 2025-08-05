@@ -1,0 +1,1 @@
+We will use bundlers like vite and parcel to bundel our react app. To install it we will use the normal command with a flag -D this is used to install dependencies which are required only during production.
