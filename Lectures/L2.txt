@@ -1,0 +1,3 @@
+We will use bundlers like vite and parcel to bundel our react app. To install it we will use the normal command with a flag -D this is used to install dependencies which are required only during production.
+To start our parcel server we use npx parcel index.html to run it.It is similar to nodemon it does the heavylifting for us like caching for faster builds and it also compresses our app  to minimize the runtime it also has HMR which rebuild whenever a change is made on the app just like nodemon.
+Browser list in the package.json helps us to tell parcel taht atleast amount of versions of browsers it should be capable qith.
