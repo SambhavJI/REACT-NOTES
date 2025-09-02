@@ -1,0 +1,5 @@
+Lets say we have to make a filter that filters out all the restaurants greater than 4 , if we do that in the normal dataset it will just update the dataset and not the UI ,  to deal with this react provides us a state variable which is accessed via a hook called useState.
+A hook is a normal Js function provided by react which comes with a prebuilt logic. There are multiple react hooks important ones are useState and useEffect.
+To create a state variable which is functional inside a component we declare it like this const[listOfRes] = useState([]); where useState is a hook and inside it is the default value for the state variable and we use the state variable normally as a normal variable.
+To make any changes to the state variable we cant directly do it for that we use a function declared inside the list of the state variable declaration.
+Whenever a state variable updates ,react re renders the component.

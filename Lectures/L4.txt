@@ -1,1 +1,2 @@
 In react we have props which we use to pass data to components. When we pass props to a component inside the </> tag what react does is it passes the props to the original functional components as arguments and we can use it inside our jsx via {props.name} and pass it as a argument to the function of jsx.
+Config driven UI means that ui can change according to data provided eg a food delivery app has diffrent UI for diffrent location.

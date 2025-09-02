@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { useState } from "react";
 
 const Header = () => {
   return (
@@ -29,23 +30,53 @@ const RestaurantCard = (props) => {
   );
 }
 const Body = () => {
+  const [mock_data, setListOfRes] = useState([
+    { resName: "Spice Garden", cuisine: "Indian", rating: 3.5 },
+    { resName: "Sakura Sushi", cuisine: "Japanese", rating: 4.7 },
+    { resName: "La Bella Italia", cuisine: "Italian", rating: 2.3 },
+    { resName: "El Toro Loco", cuisine: "Mexican", rating: 4.2 },
+    { resName: "Dragon Wok", cuisine: "Chinese", rating: 3.0 },
+    { resName: "Burger Haven", cuisine: "American", rating: 4.1 },
+    { resName: "Le Petit Bistro", cuisine: "French", rating: 4.6 },
+    { resName: "Tandoori Tales", cuisine: "Indian", rating: 3.4 },
+    { resName: "Seoul Kitchen", cuisine: "Korean", rating: 4.3 },
+    { resName: "Mediterraneo", cuisine: "Mediterranean", rating: 4.5 }
+  ]);
+
   return (
     <div className="body">
-      <div className="search">SEARCH</div>
+      <div className="filter">
+        <button
+          className="filter-btn"
+          onClick={() => {
+           const filter_data = mock_data.filter((res) => res.rating > 4);
+            setListOfRes(filter_data);
+          }}
+        >
+          Top Rated
+        </button>
+      </div>
+
       <div className="restaurant-list">
-        <RestaurantCard resName="Sagar Gaire" cuisine="north indian chinese" rating = "4.5" />
-        <RestaurantCard resName="KFC" cuisine="fastFood chinese" rating = "4.1"/>
-        <RestaurantCard resName="Chola kulcha" cuisine="north indian" rating = "4.2"/>
-        </div>
+        {mock_data.map((restaurant, index) => (
+          <RestaurantCard
+            key={index}
+            resName={restaurant.resName}
+            cuisine={restaurant.cuisine}
+            rating={restaurant.rating}
+          />
+        ))}
+      </div>
     </div>
   );
-}
+};
+
 
 const AppLayout = () => {
   return (
     <div className="app">
-      <Header/>
-      <Body/>
+      <Header />
+      <Body />
     </div>
   );
 };
