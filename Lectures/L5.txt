@@ -2,4 +2,4 @@ Lets say we have to make a filter that filters out all the restaurants greater t
 A hook is a normal Js function provided by react which comes with a prebuilt logic. There are multiple react hooks important ones are useState and useEffect.
 To create a state variable which is functional inside a component we declare it like this const[listOfRes] = useState([]); where useState is a hook and inside it is the default value for the state variable and we use the state variable normally as a normal variable.
 To make any changes to the state variable we cant directly do it for that we use a function declared inside the list of the state variable declaration.
-Whenever a state variable updates ,react re renders the component.
+Whenever a state variable updates ,react re renders the component. React tracks the state variable via virtual DOM and diff algorithms which tracks the dom before and after updates and then react updates the actual DOM.
