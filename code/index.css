@@ -60,3 +60,22 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.search-box {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+.search-btn {
+  padding: 8px 12px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} 
+.filter{
+  display: flex;
+  align-items: center;
+}

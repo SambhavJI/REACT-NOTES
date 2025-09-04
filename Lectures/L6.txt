@@ -1,0 +1,4 @@
+useEffect in react is also another hook which takes two components one is a callback function and other is the dependency array. useEffect works like this that when a component is rendered it quickly calls the callback function just after rendering.
+Rendering on the basis of condition is called conditional rendering , eg if you want some data to display in your page you can first render some data which will activate the useEffect hook which will bring us data from the api and then we render that data so first we display some loader when no data is there which is called as conditional rendering.
+If we have a login button and as soon as the user clicks on it , it changes to logout this cannot be done via normal JS variables that is why we use state variables as it re renders the component on each update which cannot be done by normal JS variables.
+Whenever a state variable gets updated react re renders the component.
