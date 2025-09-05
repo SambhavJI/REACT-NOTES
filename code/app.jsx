@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 const Header = () => {
   let [btnName, setBtnName] = useState("Login");
@@ -113,6 +116,18 @@ const AppLayout = () => {
     </div>
   );
 };
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />
+  },{
+    path: "/about",
+    element: <About />
+  },{
+    path: "/contact",
+    element: <Contact />
+  }
+]);
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter}/>);

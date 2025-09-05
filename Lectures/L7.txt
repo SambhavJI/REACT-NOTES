@@ -1,0 +1,4 @@
+If no dependency array is given to useEffect then it will run on every render of the component and if an empty array is given then it is called on initial render and if we provide some value then its called every time the value changes.
+The react-router-dom library gives us the createBrowserRouter function which takes a list of objects where each object defines what route renders which component.
+RouterProvide is a component of react-router dom which takes the createBrowserRouter as a parameter and then renders diffrent routes.
+useRouteError is a hook provided by react-router-dom to provide more information on the error.
