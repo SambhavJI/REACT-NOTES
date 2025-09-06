@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { createBrowserRouter,RouterProvider,Outlet,Link } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 const Header = () => {
   let [btnName, setBtnName] = useState("Login");
@@ -10,9 +11,9 @@ const Header = () => {
     <div className="header">
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><Link to={"/"}>Home</Link></li>
+          <li><Link to={"/about"}>About</Link></li>
+          <li><Link to={"/contact"}>Contact Us</Link></li>
           <li>Cart</li>
           <button
             className="login"
@@ -112,20 +113,27 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 };
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <AppLayout />
-  },{
+    children:[{
     path: "/about",
     element: <About />
   },{
     path: "/contact",
     element: <Contact />
+  },{
+    path: "/",
+    element: <Body />
+  },{
+    path: "/restaurant/:id",
+    element: <RestaurantMenu />
+  }],
+    element: <AppLayout />
   }
 ]);
 

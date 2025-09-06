@@ -2,3 +2,6 @@ If no dependency array is given to useEffect then it will run on every render of
 The react-router-dom library gives us the createBrowserRouter function which takes a list of objects where each object defines what route renders which component.
 RouterProvide is a component of react-router dom which takes the createBrowserRouter as a parameter and then renders diffrent routes.
 useRouteError is a hook provided by react-router-dom to provide more information on the error.
+react-router-dom gives us another function called outlet which depending on the route given the applayout should have a tag called <outlet/>.
+link component of react router dom which works same as anchor tag but it does not reloads the whole page on use instead it just renders the changed components.
+To get the parameters of the url we use a hook called useParams provided by react router dom it gives a json object of the params of an url which can be destructured.
