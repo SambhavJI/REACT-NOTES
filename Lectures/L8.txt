@@ -1,0 +1,5 @@
+We can create custom hooks in react for diffrent functions. It should be kept inside the utils folder.
+Chunking or code spliting or lazy loading is a way to split you code into diffrent chunks to make it easy to load.
+lazy loading means a component will initially not load any code of the component only when its needed then only react will load its component making the work for browser less.
+This is done by importing it via react function called lazy which takes a callback function which takes the function import so that the function is not loaded until needed.
+The component which is lazy loaded takes time to run but react is fast and it tries to render the component which throws an error that is why we use <suspence> tag provided by react which can wrap the component so react does not throw an error.It also takes a fallback which is used to display any component while the lazy load component is loading.
