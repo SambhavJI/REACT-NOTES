@@ -1,0 +1,2 @@
+There are many ways to add stype to components in react like sass , materials UI , bootstrap etc. but we will use tailwind css.
+tailwindcss is applied to the className of a component where we can write css.

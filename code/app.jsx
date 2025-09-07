@@ -11,9 +11,9 @@ const Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
   return (
-    <div className="header">
-      <div className="nav-items">
-        <ul>
+    <div className="flex justify-end bg-pink-100 shadow-lg h-15 pt-4">
+      <div>
+        <ul className="flex padding-10 gap-10">
           <li><Link to={"/"}>Home</Link></li>
           <li><Link to={"/about"}>About</Link></li>
           <li><Link to={"/contact"}>Contact Us</Link></li>
@@ -116,7 +116,7 @@ const restaurantList = [
 const RestaurantCard = ({ restaurant }) => (
   <Link to={`/restaurant/${restaurant.id}`} style={{ textDecoration: "none" }}>
     <div className="restaurant-card">
-      <img src={restaurant.image} alt={restaurant.name} />
+      <img className="w-56"src={restaurant.image} alt={restaurant.name} />
       <h3>{restaurant.name}</h3>
       <p>{restaurant.cuisine}</p>
       <p>⭐ {restaurant.rating}</p>
@@ -127,7 +127,7 @@ const RestaurantCard = ({ restaurant }) => (
 
 // ------------------ Body ------------------
 const Body = () => (
-  <div className="restaurant-list">
+  <div className="flex-nowrap bg-blue-400" >
     {restaurantList.map((rest) => (
       <RestaurantCard key={rest.id} restaurant={rest} />
     ))}
@@ -142,7 +142,7 @@ const RestaurantMenu = () => {
   if (!restaurant) return <div>Restaurant not found.</div>;
 
   return (
-    <div className="restaurant-menu">
+    <div className="flex">
       <h2>{restaurant.name} Menu</h2>
       <ul>
         {restaurant.menu.map((item, idx) => (
